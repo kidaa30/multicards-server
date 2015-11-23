@@ -1,0 +1,89 @@
+lFeV5_1cQJrSgyMYAAAA connected
+OALp9jX0hY3ZjBuyAAAB connected
+got message from reids for lFeV5_1cQJrSgyMYAAAA
+got message from reids for lFeV5_1cQJrSgyMYAAAA
+got message from reids for lFeV5_1cQJrSgyMYAAAA
+got message from reids for lFeV5_1cQJrSgyMYAAAA
+LKGmPWCACzytJjeyAAAC connected
+got message from reids for LKGmPWCACzytJjeyAAAC
+got message from reids for LKGmPWCACzytJjeyAAAC
+got message from reids for LKGmPWCACzytJjeyAAAC
+Sqvt3oRKtY8r6j1QAAAD connected
+got message from reids for Sqvt3oRKtY8r6j1QAAAD
+got message from reids for Sqvt3oRKtY8r6j1QAAAD
+got message from reids for Sqvt3oRKtY8r6j1QAAAD
+got message from reids for Sqvt3oRKtY8r6j1QAAAD
+1ErfI1OCpaqhC3eMAAAE connected
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+got message from reids for 1ErfI1OCpaqhC3eMAAAE
+V-Nm_SRedUadJfVqAAAF connected
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+got message from reids for jbhvgV-Nm_SRedUadJfVqAAAF
+OiuAHO7E9qsERsELAAAG connected
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+got message from reids for OiuAHO7E9qsERsELAAAG
+FM8rtrUXVxWXrZuRAAAH connected
+l1QZrWmY-SIXQ0PqAAAI connected
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+got message from reids for l1QZrWmY-SIXQ0PqAAAI
+UcG9GmBYSXnXEhNRAAAJ connected
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+got message from reids for UcG9GmBYSXnXEhNRAAAJ
+hrTA_1ZdIUEUMhKqAAAK connected
+(node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit.
+Trace
+    at RedisClient.addListener (events.js:160:15)
+    at Namespace.<anonymous> (/data/projects/memorizer/realtime/realtime.js:24:9)
+    at Namespace.emit (events.js:95:17)
+    at Namespace.emit (/data/projects/memorizer/realtime/node_modules/socket.io/lib/namespace.js:205:10)
+    at /data/projects/memorizer/realtime/node_modules/socket.io/lib/namespace.js:172:14
+    at process._tickCallback (node.js:419:13)
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK
+got message from reids for hrTA_1ZdIUEUMhKqAAAK

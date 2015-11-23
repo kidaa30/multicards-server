@@ -1,0 +1,1 @@
+curl -X POST localhost:81/game -d '{"id_to":"pW-zBCGChoAeiWM3T3Nm"}'
