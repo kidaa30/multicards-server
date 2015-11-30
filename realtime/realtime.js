@@ -3,6 +3,10 @@ var server = app.listen(5001);
 var io = require('socket.io').listen(server);
 var fs = require('fs');
 var redis = require('redis').createClient();
+var consts = require('./const.js');
+var http = require('http');
+var utf8 = require('utf8');
+http.post = require('http-post');
 
 function handler (req, res) {
   fs.readFile(__dirname + '/index.html',
@@ -17,14 +21,51 @@ function handler (req, res) {
   });
 }
 
-redis.subscribe('events');
+redis.subscribe(consts.SOCK_CHANNEL);
+
+redis.on('message', function(channel, message){
+  console.log('got redis message ' + message);
+  msg = JSON.parse(message);
+  msg["test"] =  utf8.encode("искренний");
+  for (var i = 0; i < msg.id_to.length; i++) {
+    io.to(msg.id_to[i]).emit('event', message);
+    console.log('sending message to ' + msg.id_to[i]);
+  }
+});
 
 io.on('connection', function(socket){
   console.log(socket.id + ' connected');
-  redis.on('message', function(channel, message){
+
+  msg = JSON.stringify( { msg_type: consts.SOCK_MSG_TYPE_ANNOUNCE_SOCKETID, msg_body: socket.id } );
+  io.to(socket.id).emit('event', msg);
+
+  socket.on('message', function(message){
+    console.log('got message from client: ' + message);
     msg = JSON.parse(message);
-    console.log('got message from reids for ' + msg.id_to)
-    io.to(msg.id_to).emit('event', message); 
-    //io.sockets.socket(msg.id_to).emit('event', message); 
+    if (msg.id_to != null) {
+      for (var i = 0; i < msg.id_to.length; i++) {
+        io.to(msg.id_to[i]).emit('event', message);
+      }
+    } else {
+      http.post(consts.RAILS_SERVER, msg, function(res){
+        res.setEncoding('utf8');
+        res.on('data', function(chunk) {
+          console.log(chunk);
+        });
+      });      
+    }
   });
+
+  socket.on('disconnect', function() {
+    console.log('Disconnected ' + socket.id);
+    //msg = JSON.stringify( {msg_type: consts.SOCK_MSG_TYPE_SOCKET_CLOSE, msg_body: socket.id } );
+    msg = {msg_type: consts.SOCK_MSG_TYPE_SOCKET_CLOSE, msg_body: socket.id };
+    http.post(consts.RAILS_SERVER, msg, function(res){
+      res.setEncoding('utf8');
+      res.on('data', function(chunk) {
+        console.log(chunk);
+      });
+    });
+  });
+
 });
