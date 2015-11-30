@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
+  post 'user' => 'user#new'
   post 'game' => 'game#new'
+  post 'event' => 'event#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
