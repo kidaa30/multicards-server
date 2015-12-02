@@ -67,6 +67,14 @@ describe('Suite of unit tests', function() {
             });
         });
 
+        it('Should trigger event on rails server', function(done) {
+            client1 = io.connect(url, options);
+            client1.on('connect', function(data){
+              test_msg_json = {id_to: [], msg_type: consts.SOCK_MSG_TYPE_PLAYER_STATUS_UPDATE, msg_body: 'player_waiting'};
+              client1.emit("message", JSON.stringify(test_msg_json));
+              done();
+            });
+        });
 
 
     });
