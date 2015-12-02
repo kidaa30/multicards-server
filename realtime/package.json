@@ -4,8 +4,12 @@
   "version" : "0.0.1",
   "dependencies" : {
     "socket.io" : "1.1.0",
+    "socket.io-client" : "1.1.0",
+    "expect.js" : "*",
+    "assert" : "*",
     "redis": "0.7.3",
     "http-post" : "0.1.1",
+    "url-parse" : "*",
     "utf8" : "2.0.0"
   }
 }
