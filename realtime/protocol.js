@@ -35,12 +35,16 @@ exports.announce_socket_id = function (io, socket_id) {
 };
 
 exports.http_post_local = function (json_msg) {
+  'use strict';
+ 
+  var parse = require('url-parse'), url = parse(consts.RAILS_SERVER, true);
+
   var data = JSON.stringify(json_msg);
 
   var options = {
-    host: 'localhost',
-    port: 80,
-    path: '/event',
+    host: url.host,
+    port: url.port,
+    path: url.pathname,
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
@@ -58,11 +62,4 @@ exports.http_post_local = function (json_msg) {
   req.write(data);
   req.end();
 
-
-  /*http.post(consts.RAILS_SERVER, json_msg, function(res){
-    res.setEncoding('utf8');
-    res.on('data', function(chunk) {
-      console.log(chunk);
-    });
-  });*/
 };
