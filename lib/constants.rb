@@ -33,6 +33,7 @@ class Constants
   JSON_USER_ID		=	"id"
 
   JSON_SOCK_MSG_TO	=	"id_to"
+  JSON_SOCK_MSG_FROM	=	"id_from"
   JSON_SOCK_MSG_BODY	=	"msg_body"
   JSON_SOCK_MSG_TYPE	=	"msg_type"
   JSON_SOCK_MSG_GAMEID	=	"game_id"
