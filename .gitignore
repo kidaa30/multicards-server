@@ -16,3 +16,6 @@
 /tmp
 
 /realtime/node_modules
+/realtime/nohup
+/realtime/nohup.out
+/config/database.yml
