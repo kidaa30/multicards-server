@@ -52,7 +52,11 @@ def new
      
   end
   msg = { :result => Constants::RESULT_OK }
-  render :json => msg
+
+  respond_to do |format|
+    format.json  { render :json => msg }
+  end
+
 end
 
 end
