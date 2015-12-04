@@ -48,6 +48,7 @@ exports.http_post_local = function (json_msg) {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',
+        'Accept': '*/*',
         'Content-Length': Buffer.byteLength(data)
     }
   };
