@@ -1,0 +1,22 @@
+defaults: &defaults
+  server_prefix: http://multicards.snufan.com
+
+  s3_access_key_id: [aws s3 access key id]
+  s3_secret_access_key: [aws s3 secret access key]
+  s3_region: [aws s3 region name]
+  s3_bucket: [aws s3 bucket name - for image upload]
+  s3_prefix: upload
+
+  google_api_key: [google api key for push notifications]
+
+  smsc_login: [login for smsc.ru]
+  smsc_pw: [password for smsc.ru]
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
