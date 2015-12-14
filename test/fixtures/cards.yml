@@ -1,9 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  front: MyString
-  back: MyString
+  front: word1
+  back: answer1
 
 two:
-  front: MyString
-  back: MyString
+  front: word2
+  back: answer2
+
+three:
+  front: word3
+  back: answer3
+
+four:
+  front: word4
+  back: answer4
