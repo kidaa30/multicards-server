@@ -1,5 +1,9 @@
 var app = require('http').createServer();
-var server = app.listen(5001);
+var server;
+if (process.env['ENV'] == 'test')
+  server = app.listen(5002);
+else
+  server = app.listen(5001);
 var io = require('socket.io').listen(server);
 var fs = require('fs');
 var redis = require('redis').createClient();

@@ -1,6 +1,11 @@
 var consts = require('./consts.js');
 var http = require('http');
 http.post = require('http-post');
+var rails_server;
+if (process.env['ENV'] == 'test')
+  rails_server = consts.RAILS_SERVER_TEST;
+else
+  rails_server = consts.RAILS_SERVER;
 
 exports.msg_ext = function (io, socket, msg) {
   msg_json = JSON.parse(msg);
