@@ -1,3 +1,4 @@
+require 'constants'
 class User < ActiveRecord::Base
 
   def update(json_body)
@@ -11,6 +12,12 @@ class User < ActiveRecord::Base
         cur_details[key] = value
     end
     self.details = cur_details.to_json
+  end
+
+  def get_details
+    details = JSON.parse(self.details)
+    details[Constants::JSON_USER_ID] = self.id
+    return details
   end
 
 end
