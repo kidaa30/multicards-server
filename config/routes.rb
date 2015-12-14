@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
   post 'user' => 'user#new'
+  put 'user' => 'user#update'
   post 'game' => 'game#new'
   post 'event' => 'event#new'
+  post 'image' => 'upload#upload'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
