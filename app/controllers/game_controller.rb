@@ -4,8 +4,9 @@ class GameController < ApplicationController
 skip_before_filter :verify_authenticity_token
 
 def new
-  game_id = 0
+  game_id = nil
   games = Game.all
+  game_details = {}
   games.each do |game|
     game_details = JSON.parse(game.details)
     if ((game_details[Constants::JSON_GAME_STATUS] == Game::STATUS_SEARCHING_PLAYERS) and @socket_id != nil )
@@ -21,9 +22,8 @@ def new
       break
     end
   end
-  if ((game_id == 0) and (@socket_id != nil) )
+  if ((game_id == nil) and (@socket_id != nil))
     game = Game.new
-    game_details = {}
     game_details[Constants::JSON_GAME_PLAYERS] = {@socket_id => Game::PLAYER_STATUS_WAITING}
     game_details[Constants::JSON_GAME_STATUS] = Game::STATUS_SEARCHING_PLAYERS
     game_details[Constants::JSON_GAME_PROFILES] = {@socket_id => @user.get_details}
