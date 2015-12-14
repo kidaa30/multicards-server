@@ -13,6 +13,11 @@ class ApplicationController < ActionController::Base
       respond_to do |format|
         format.json  { render :json => msg } 
       end
+    elsif @socket_id == nil
+      msg = { :result => "ERROR", :msg => "Missing socket id" }
+      respond_to do |format|
+        format.json  { render :json => msg }
+      end
     else
       @user_details = JSON.parse(@user.details)  
     end
