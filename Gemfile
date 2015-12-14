@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'socket.io-client-simple'
+
+gem 'rmagick', '2.15.0'
+
 gem 'redis'
 
 gem 'pg'
