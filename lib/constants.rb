@@ -22,15 +22,20 @@ class Constants
   SOCK_MSG_TYPE_PLAYER_ANSWERED	="player_answered"
   SOCK_MSG_TYPE_SOCKET_CLOSE	="socket_disconnected"
   SOCK_MSG_TYPE_GAME_END	="game_end"
+  SOCK_MSG_TYPE_QUIT_GAME	="quit_game"
   SOCK_MSG_TYPE_GAME_START	="game_start"
 
   JSON_GAME_ID		=	"game_id"
   JSON_GAME_STATUS	=	"status"
   JSON_GAME_PLAYERS	=	"players"
+  JSON_GAME_PROFILES	=	"profiles"
   JSON_GAME_CURQUESTION	=	"question"
+  JSON_GAME_QUESTIONCNT	=	"question_count"
+  JSON_GAME_QUESTIONTYPE=	"question_type"
 
   JSON_USER_SOCKETID	=	"socketid"
   JSON_USER_ID		=	"id"
+  JSON_USER_AVATAR	=	"avatar"
 
   JSON_SOCK_MSG_TO	=	"id_to"
   JSON_SOCK_MSG_FROM	=	"id_from"
