@@ -42,12 +42,12 @@ exports.announce_socket_id = function (io, socket_id) {
 exports.http_post_local = function (json_msg) {
   'use strict';
  
-  var parse = require('url-parse'), url = parse(consts.RAILS_SERVER, true);
+  var parse = require('url-parse'), url = parse(rails_server, true);
 
   var data = JSON.stringify(json_msg);
 
   var options = {
-    host: url.host,
+    host: url.hostname,
     port: url.port,
     path: url.pathname,
     method: 'POST',
