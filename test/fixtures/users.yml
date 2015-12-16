@@ -1,9 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  socket_id: MyString
-  details: MyString
-
-two:
-  socket_id: MyString
-  details: MyString
