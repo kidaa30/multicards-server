@@ -15,6 +15,7 @@
 /log/*.log
 /tmp
 
+nohup.out
 /realtime/node_modules
 /realtime/nohup
 /realtime/nohup.out
