@@ -1,4 +1,5 @@
 require 'constants'
+require 'protocol'
 module TestUtils
 
   def register(profile)
@@ -14,6 +15,13 @@ module TestUtils
     @request.headers[Constants::HEADER_SOCKETID] = socketid
     post :new
     game_id = JSON.parse(@response.body)['data']['id']    
+  end
+
+  def quit_game(socket)
+    msg_type = Constants::SOCK_MSG_TYPE_QUIT_GAME
+    msg_body = socket.session_id
+    msg = Protocol.make_msg(nil, msg_type, msg_body)
+    socket.emit :message, msg
   end
 
   def filter(list, msg_type)
