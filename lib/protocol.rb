@@ -23,12 +23,10 @@ class Protocol
   end
 
   def self.msg_socket_close(id_from, msg_type, msg_body)
-    puts "Closing socket "
     puts id_from
     socket_id = msg_body
     games = Game.find_by_socket_id(socket_id)
     games.each do |game|
-      puts "destroying game with id"
       puts game.id
       game.end_game
       game.destroy
@@ -51,7 +49,6 @@ class Protocol
       self.msg_user_status_update(id_from, msg_type, msg_body)
     elsif (msg_type == Constants::SOCK_MSG_TYPE_SOCKET_CLOSE)
       self.msg_socket_close(id_from, msg_type, msg_body)
-    elsif (msg_type == Constants::SOCK_MSG_TYPE_PLAYER_ANSWERED)
     elsif (msg_type == Constants::SOCK_MSG_TYPE_QUIT_GAME)
       self.msg_socket_close(id_from, msg_type, id_from)    
     end
